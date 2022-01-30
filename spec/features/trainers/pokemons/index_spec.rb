@@ -17,7 +17,7 @@ describe 'Trainer pokemons index' do
     # we are expecting to see red's fire type pokemon, but not blue's water types.
     visit "/trainers/#{@red.id}/pokemons"
 
-    expect(page).to have_content("#{@red.name}'s Pokémon")
+    expect(page).to have_content("#{@red.name}'s Pokédex")
 
     expect(page).to have_content("Name: #{@charizard.name}")
     expect(page).to have_content("hp: #{@charizard.hp}")
