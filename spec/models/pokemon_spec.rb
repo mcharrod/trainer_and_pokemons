@@ -8,6 +8,11 @@ describe Pokemon do
     expect(pikachu).to be_a(Pokemon)
   end
 
+  describe 'validations' do
+    it { should validate_presence_of :name }
+    it { should validate_presence_of :hp }
+  end
+
   describe 'relationship' do
     it { should belong_to(:trainer) }
   end
