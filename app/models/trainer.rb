@@ -5,4 +5,8 @@ class Trainer < ApplicationRecord
   validates_presence_of :age
 
   validates_uniqueness_of :name
+
+  def self.ordered
+    Trainer.order(:created_at)
+  end
 end

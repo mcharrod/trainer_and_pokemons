@@ -16,7 +16,19 @@ describe 'trainer index' do
   end
 
   it 'sorts trainers by most recently created' do
+    visit "/trainers"
 
-    expect(@ash).to appear_before(@blue)
+    within('#trainers') do
+      expect(@ash.name).to appear_before(@blue.name)
+      expect(@blue.name).to appear_before(@red.name)
+    end
+  end
+
+  it 'displays time created next to each trainer name' do
+    visit "/trainers"
+
+    within("#trainer_#{@ash.id}") do
+      expect(page).to have_content(@ash.created_at)
+    end
   end
 end
