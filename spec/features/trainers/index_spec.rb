@@ -26,7 +26,6 @@ describe 'trainer index' do
 
   it 'displays time created next to each trainer name' do
     visit "/trainers"
-    save_and_open_page
 
     within("#trainer_#{@ash.id}") do
       expect(page).to have_content(@ash.created_at)
