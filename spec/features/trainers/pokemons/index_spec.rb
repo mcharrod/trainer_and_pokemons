@@ -18,7 +18,7 @@ describe 'Trainer pokemons index' do
     visit "/trainers/#{@red.id}/pokemons"
 
     expect(page).to have_content("#{@red.name}'s Pokémon")
-    
+
     expect(page).to have_content("Name: #{@charizard.name}")
     expect(page).to have_content("hp: #{@charizard.hp}")
     expect(page).to have_content("In battle? #{@charizard.in_battle}")
@@ -33,7 +33,7 @@ describe 'Trainer pokemons index' do
 
     expect(page).not_to have_content(@squirtle.name)
     expect(page).not_to have_content(@squirtle.hp)
-    expect(page).not_to have_content(@piplip.name)
-    expect(page).not_to have_content(@piplip.hp)
+    expect(page).not_to have_content(@piplup.name)
+    expect(page).not_to have_content(@piplup.hp)
   end
 end
