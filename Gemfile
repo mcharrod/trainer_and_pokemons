@@ -41,6 +41,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'orderly'
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'pry'
